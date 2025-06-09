@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Links Clicáveis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      display: inline-block;
+      margin: 10px 0;
+      transition: background-color 0.3s, color 0.3s, padding 0.3s;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      padding: 7px 12px;
+    }
+
+    /* Tema claro */
+    body.light-mode {
+      background-color: #f4f4f4;
+      color: #000;
+    }
+
+    .light-mode a {
+      color: #007BFF;
+    }
+
+    .light-mode a:hover {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    /* Tema escuro */
+    body.dark-mode {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .dark-mode a {
+      color: #1E90FF;
+    }
+
+    .dark-mode a:hover {
+      background-color: #1E90FF;
+      color: #000;
+    }
+
+    button {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #555;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <button onclick="toggleMode()">Alternar Modo Claro/Escuro</button>
+
+  <h1>SO LENDAS</h1>
+
+  <h2>Vicitor</h2>
+  <a href="https://www.instagram.com/raicca.guedes/" aria-label="Perfil do Instagram da ex-esposa do Vicitor">Ex Esposa do Vicitor</a>
+
+  <p>CARIGAY</p>
+  <a href="https://www.google.com/maps/place/Duque+de+Caxias,+RJ" aria-label="Localização de Duque de Caxias no Google Maps">Carioca?</a>
+
+  <h2>Vitão LINDO</h2>
+  <a href="https://www.instagram.com/victorhugodeavilasilva/" aria-label="Perfil do Instagram do Vitão">VITAO SENDO LINDO</a>
+
+  <h2>Gabriel Cruz</h2>
+  <a href="https://www.instagram.com/gabriell.cruzz/" aria-label="Perfil do Instagram do Gabriel Cruz">JACINTO SENDO LINDAO</a>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
